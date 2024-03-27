@@ -23,9 +23,9 @@ while True:
 
     if rand_type_col_similar == 1:
         col_similar = red
-    elif rand_type_col_similar == 2: # creates similar colors at random
-        col = green
-    elif rand_type_col_similar == 3:
+    if rand_type_col_similar == 2: # creates similar colors at random
+        col_similar = green
+    if rand_type_col_similar == 3:
         col_similar = blue
 
     x, y = (random.randint(0, screen_width - 1), random.randint(0, screen_height - 1)) # creates x, y for the pixels
@@ -35,5 +35,5 @@ while True:
 
     screen.set_at((x, y), col) # creates random col, col_similar
 
-    screen.set_at((x, y), col_similar)
+    screen.set_at((sim_x, sim_y), col_similar)
     pygame.display.flip()
