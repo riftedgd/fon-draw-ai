@@ -19,8 +19,6 @@ while True:
             sys.exit()
              
     col = ((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))) # creates random color
-
-    rand_type = random.randint(1, 2)
     rand_type_col_similar = random.randint(1, 3) # types of random and col_similar
 
     if rand_type_col_similar == 1:
@@ -34,8 +32,8 @@ while True:
     sim_x, sim_y = (random.randint(100, screen_width - 300), random.randint(100, screen_height - 300)) 
 
 
-    if rand_type == 1:
-        screen.set_at((x, y), col) # creates random col, col_similar
-    elif rand_type == 2:
-        screen.set_at((x, y), col_similar)
+
+    screen.set_at((x, y), col) # creates random col, col_similar
+
+    screen.set_at((x, y), col_similar)
     pygame.display.flip()
